@@ -22,7 +22,7 @@ function Navbar({}: Props) {
 
         </div>
 
-        {/* links */}
+
         <div>
             <ul className='flex gap-5 text-white  items-center justify-center  font-[500]'>
                 <li className='bg-[#262626] py-3 px-4 rounded-md'>Home</li>
