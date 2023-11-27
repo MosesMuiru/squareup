@@ -1,14 +1,22 @@
+"use client"
+
 import React from 'react'
 import Image from 'next/image'
-
+import { useState } from 'react'
 type Props = {}
 
+
 function Navbar({}: Props) {
+  const [bg, setbg] = useState<boolean>(true)
+  
+  const setActiveLink = () =>  bg ? "bg-[#262626] py-3 px-4 rounded-md" : ""
+  console.log(bg)
+
+
   return (
     <nav className='flex items-center justify-between py-4 px-5 border-b-[0.5px] border-white'>
        <div className='flex gap-6'>
         
-  
         {/* logo */}
         <Image
             src="/Logo.svg"
@@ -25,12 +33,16 @@ function Navbar({}: Props) {
 
         <div>
             <ul className='flex gap-5 text-white  items-center justify-center  font-[500]'>
-                <li className='bg-[#262626] py-3 px-4 rounded-md'>Home</li>
-                <li>Services</li>
-                <li>Work</li>
-                <li>Process</li>
-                <li>About</li>
-                <li>Careers</li>
+                <li onClick={
+                  () => {
+                    setbg(false)
+                  }
+                } className='bg-[#262626] py-3 px-4 rounded-md'>Home</li>
+                <li className= {`cursor-pointer ${bg}`}>Services</li>
+                <li className= {`cursor-pointer`}>Work</li>
+                <li className= {`cursor-pointer`}>Process</li>
+                <li className= {`cursor-pointer`}>About</li>
+                <li className= {`cursor-pointer`}>Careers</li>
             </ul>
         </div>
 

@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import Navbar from './components/Navbar'
 import HomePage from './components/HomePage'
+import OurServices from './components/OurServices'
+
 
 
 export default function Home() {
@@ -10,6 +12,8 @@ export default function Home() {
 
     <Navbar/>
     <HomePage/>
+    <OurServices/>
+    
     </div>
 
   
